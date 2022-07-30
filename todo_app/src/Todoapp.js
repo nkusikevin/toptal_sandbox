@@ -40,7 +40,7 @@ export class Todoapp extends Component {
 		return (
 			<>
 				<div style={{ margin: "40px" }}>
-					<span>Todo List Class</span>
+					<span>Todo List </span>
 
 					<form onSubmit={this.handleSubmit}>
 						<input type='text' name='toto' />
@@ -52,7 +52,10 @@ export class Todoapp extends Component {
 					</div>
 
 					{this.state.todos.map((todo, idx) => (
-						<div key={todo.id} onClick={() => this.handleTodoClick(idx)}>
+						<div
+							key={todo.id}
+							onClick={() => this.handleTodoClick(idx)}
+							className={cx({ done: todo.done })}>
 							{todo.label}
 						</div>
 					))}
