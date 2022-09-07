@@ -47,9 +47,9 @@ export class Todoapp extends Component {
 						<input type='submit' value='Add Todo' />
 					</form>
 
-					{/* <div>
+					<div>
 						<p>1</p> remaining outof <p>1</p> tasks
-					</div> */}
+					</div>
 
 					{this.state.todos.map((todo, idx) => (
 						<div
